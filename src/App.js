@@ -32,16 +32,8 @@ function App() {
                     </Route>
                     <Route path="./Page/validateInfo/:id" component={validateInfo} exact>
                     </Route>
-
-
                 </Switch>
             </Router>
         </div>
-    );
-}
-
-
-
-
-
+    );}
 export default App;
