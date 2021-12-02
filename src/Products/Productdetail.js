@@ -1,33 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'; //hook we are using is useParams 
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react/cjs/react.development';
 
 
-const ProductDetail = (props) => {
+const ProductDetail = () => {
     const params = useParams();
-    let content = null
+    const [product, setProduct] = useState([]);
 
-    return <div>Product Information: {JSON.stringify(params)}
-        <div className="p-3">
-            <h3 className="font-bold text-x1 mb-3">
-                <Link to={'/Products/${props.product.id}'}>
-                    {props.product.name}
-                </Link>
-            </h3>
+    useEffect(() => {
+        const url = 'https://fakestoreapi.com/products/${params.id}';
+    fetch(url).then(res => res.json())
+      .then(json => setProducts(json));
+  }, [params.id]);
 
-            <div className="font-bold-mb-3">
-                $ {props.product.price}
-            </div>
+  return (
+      <div>
+      <div className="pdBox">
+      <img src={product.image} alt={product.title} classname="productImage" />
+      <h5>{product.name}</h5>
+      <div>$ {product.description}</div>
+      </div>
+      </div>
+  );
+};
 
-            <div className="mb-3">
-                {props.product.description}
-            </div>
-
-            <Link
-                to={'/products/${props.product.id}'}
-                className="bg-blue-500 text-white p-2 flex justify-center w-full"
-            >View
-            </Link>
-        </div>
-    </div>; };
-export default ProductDetail
+export default ProductDetail;
