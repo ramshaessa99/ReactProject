@@ -14,13 +14,13 @@ function Products() {
     <div className="productContainer">
       {products.map((product) => (
         <div className="productBox">
-        <img src={product.image} alt={product.title} className="productImage" />
-        <p className="productTitle">{product.title}</p>
-        <span className="productPrice">{product.price}</span>
-      </div>                                                     //Product detail will get data from URL. Make product detail page
-  ))};
-  </div>
+          <img src={product.image} alt={product.title} className="productImage" />
+          <p className="productTitle">{product.title}</p>
+          <span className="productPrice">{product.price}</span>
+        </div>                                                     //Product detail will get data from URL. Make product detail page
+      ))};
+    </div>
   );
-      }
+}
 
 export default Products
