@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router'; //hook we are using is useParams 
 import React, { useEffect, useState } from 'react';
+import './Page/pStyle.css'
+
 
 
 const ProductDetail = () => {

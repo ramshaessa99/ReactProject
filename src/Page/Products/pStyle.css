@@ -1,0 +1,28 @@
+.productBox {
+    background-color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    max-width: 450px;
+    max-height: 450px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.productTile {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 300px;
+}
+
+.productImage {
+    height: 400px;
+    width: 400px;
+    outline-style: dotted;
+    outline-color: blueviolet;
+}
+
+.productPrice {
+    color: black;
+    font-size: medium;
+}

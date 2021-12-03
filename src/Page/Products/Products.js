@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import './Page/pStyle.css'
+
 
 function Products() {
   const [products, setProducts] = useState([])
